@@ -41,7 +41,7 @@ jobs:
         pytest tests.py
     - name: Build Documentation  
       run: | 
-        mkdocs gh-deploy --force
+        mkdocs gh-deploy
     - name: Deploy Documentation to GitHub Pages 
       uses: actions/checkout@v3 
       with: 

@@ -16,8 +16,13 @@ def test_large_prime():
 
 def test_large_non_prime():
     assert is_prime(1000) == False
-    assert is_prime(1020) == False
+    assert is_prime(2020) == False
 
-def test_edge_cases():
+def test_negatives_cases():
     assert is_prime(-1) == False
     assert is_prime(-10) == False
+
+def test_input_type():
+    with pytest.raises(Exception):
+        is_prime('1000')
+    

@@ -39,12 +39,4 @@ jobs:
     - name: Test with pytest
       run: |
         pytest tests.py
-    - name: Build Documentation  
-      run: | 
-        mkdocs gh-deploy
-    - name: Deploy Documentation to GitHub Pages 
-      uses: actions/checkout@v3 
-      with: 
-        github_token: ${{ secrets.GITHUB_TOKEN }}   
-        publish_dir: ./site   
-        publish_branch: release
+
